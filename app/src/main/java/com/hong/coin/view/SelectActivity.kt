@@ -35,14 +35,23 @@ class SelectActivity : AppCompatActivity() {
             Timber.d(it.toString())
         })
 
-        viewModel.setUpFirstFlag()
+
         binding.laterTextArea.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
+            viewModel.setUpFirstFlag()
+            viewModel.saveSelectedCoinList(selectRVAdapter.selectedCoinList)
+
         }
 
         //Room, SQLlite 를 사용하지 않고 DataStore 을 사용하는 이유는 굳이 DB까지는 아니여서..
         //DataStore 은 Flag ON/OFF 저장할 때 좋더라,, 처음가입한 사람인가? 설정을 ON/OFF
+
+        viewModel.save.observe(this, {
+            if(it.equals("done")){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+        })
 
 
     }
