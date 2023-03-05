@@ -1,10 +1,9 @@
-package com.hong.coin
+package com.hong.coin.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import com.hong.coin.R
 import timber.log.Timber
-import kotlin.time.TimedValue
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -105,7 +105,7 @@ class SelectViewModel : ViewModel() {
             }
         }
 
-        //이렇게 추가해줘야 에러안남 
+        //이렇게 추가해줘야 에러안남
         withContext(Dispatchers.Main){
             //아래줄만 쓰면 에러남
             _saved.value = "done"

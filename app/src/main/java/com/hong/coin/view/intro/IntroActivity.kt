@@ -6,7 +6,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.hong.coin.MainActivity
+import com.hong.coin.main.MainActivity
 import com.hong.coin.databinding.ActivityIntroBinding
 import timber.log.Timber
 

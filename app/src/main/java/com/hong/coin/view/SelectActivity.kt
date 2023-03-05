@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hong.coin.MainActivity
+import com.hong.coin.main.MainActivity
 import com.hong.coin.databinding.ActivitySelectBinding
 import com.hong.coin.view.adapter.SelectRVAdapter
 import timber.log.Timber
