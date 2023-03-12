@@ -47,6 +47,9 @@ class CoinListFragment : Fragment() {
         viewModel.selectedCoinList.observe(viewLifecycleOwner, Observer {
             //Timber.d(it.toString())
 
+            selectedList.clear()
+            unSelectedList.clear()
+
             for(item in it) {
 
                 if(item.selected){
