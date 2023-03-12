@@ -23,6 +23,8 @@ class GetCoinPriceRecentContractWorkManager(val context : Context, workerParamet
 
         Timber.d("doWork")
 
+        getAllInterestSelectedCoinData()
+
         return Result.success()
 
     }
