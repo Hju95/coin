@@ -3,6 +3,7 @@ package com.hong.coin.repository
 import com.hong.coin.App
 import com.hong.coin.db.CoinPriceDatabase
 import com.hong.coin.db.entity.InterestCoinEntity
+import com.hong.coin.db.entity.SelectedCoinPriceEntity
 
 class DBRepository {
 
@@ -22,5 +23,12 @@ class DBRepository {
 
     //사용자가 관심있어한 코인만 가져오기
     fun getAllInterestSelectedCoinData() = db.interestCoinDAO().getSelectedData()
+
+    //CoinPrice
+    fun getAllCoinPriceData() = db.selectedCoinDAO().getAllData()
+
+    fun insertCoinPriceData(selectedCoinPriceEntity: SelectedCoinPriceEntity) = db.selectedCoinDAO().insert(selectedCoinPriceEntity)
+
+    fun getOneSelectedCoinData(coinName : String) = db.selectedCoinDAO().getOneCoinData(coinName)
 
 }

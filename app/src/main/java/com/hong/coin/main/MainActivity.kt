@@ -1,11 +1,13 @@
 package com.hong.coin.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.hong.coin.R
 import com.hong.coin.databinding.ActivityMainBinding
+import com.hong.coin.view.setting.SettingActivity
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.setting.setOnClickListener {
+            var intent = Intent(this, SettingActivity::class.java)
+            startActivity(intent)
+        }
 
         val bottomNavigationView = binding.bottomNavigationView
         val navController = findNavController(R.id.fragmentContainerView)
